@@ -1,0 +1,190 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Android &larr; </title>
+   <meta name="author" content="ShunFa Zhang" />
+
+   <link rel="start" href="/" />
+
+	
+	
+	
+  	<link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/Garretthh07" title="RSS feed" />
+	
+	
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/assets/themes//css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/assets/themes//css/screen.css" type="text/css" />
+
+</head>
+<body id="">
+<div id="site">
+  
+  <div id="header">
+    <h1>
+    	<a href="/" title="Garretthh07's Blog">Garretthh07's Blog</a>
+    	<span class="byline">&larr; <a href="/">ShunFa Zhang</a></span>
+    </h1>
+    <ul class="nav">
+      <li><a class="home" href="/">Home</a></li>
+      <li><a  href="/archive.html">Archive</a></li>
+      <li><a  href="/pages.html">Pages</a></li>
+      <li><a  href="/categories.html">Categories</a></li>
+      <li><a  href="/tags.html">Tags</a></li>
+    </ul>
+  </div>
+
+  
+<div id="page">
+	
+  <h1 class="emphnext">Android</h1>
+  <ul class="tag_box inline">
+  
+  
+
+
+  
+     
+    	<li><a href="/tags.html#Life-ref">Life <span>4</span></a></li>
+    
+  
+
+
+
+  </ul>
+
+  
+<hr />
+
+<p><code class="highlighter-rouge">2月18号</code> Apple Pay 刚刚进入中国, 很多人吵的很凶，说这是银联要和支付宝，微信支付开战的节奏，然而我并不看好 Apple Pay:</p>
+
+<ul>
+  <li>首先 <code class="highlighter-rouge">Apple Pay</code> 只能适用于 iphone 6 以上的机型， 系统要求要 iOS 9.2 以上</li>
+  <li>支付宝，微信对于平台没有要求，并且前期已经投入大量人力物力财力养成了用户付费习惯， 才支付层面肯定是干不过这两家公司的。 倒是可以作为苹果进军中国支付， 银联进军互联网的一个契机</li>
+  <li>苹果目测不会对 Apple Pay 做符合中国人民用户习惯的改变， 看 AppStore 就知道了</li>
+  <li>Apple Pay 更想是一个卡包（实际上就是）， 而不像微信， 支付宝是一个钱包（可以转帐，汇款）</li>
+  <li>Android 机占比大约 66%， iphone 占比达约 32%</li>
+</ul>
+
+<p>目前来看 <code class="highlighter-rouge">Apple Pay</code> 只能用来装逼。 装逼过后剩下什么？啥都不会剩下。 今天就聊一聊 Android, 感觉 Android 的未来还是一片光明的：</p>
+
+<ul>
+  <li>Android 手机占据着中国主要的市场，陆续会出来 Android Pay 之类现在流行的东西</li>
+  <li>Android 使用的开发语言是 Java, 现在是世界上使用最多的语言。 Java 还可以做服务器之类的很多方面的事， 现在看来 OC 或者 Swift 都只能用来做 IOS 开发</li>
+  <li>现在 Google 退出了更加先进的 <code class="highlighter-rouge">gradle + Android Studio</code> 开发工具可以使开发更加的得心应手</li>
+  <li>ios 开发出一个 APP 除了越狱， 一般只能上 App Store。 App Store 在国内访问速度之慢也是难以忍受的。 加上苹果漫长的审核周期和近乎严格的上架规则也是无形之中形成了一道阻碍。</li>
+  <li>ios 开发需要一台 Mac ＋ 开发者证书 + iphone， 这是一笔不小的开支，无形之中形成了不小的阻碍。 Android 就更加平民。</li>
+  <li>ios 有 App Store， Android 也有 Google Play</li>
+</ul>
+
+<p>目前来看很多人选择做 ios开发 是看中其高薪， 但是长远来看并不见得。虽然说技术这种东西是一通百通，但是就目前来看越早把握越好。 不要像 08 年的房价， 现在（以后）想买（转行）已经来不及了。 坚持该坚持的，总有一天会看到广明。</p>
+
+<h3 id="android-tips">Android Tips</h3>
+<p>多余这段时间工作上的事情做下总结：</p>
+
+<ul>
+  <li>把原来 Eclipse 的工程转换成 Android Studio 确实开发快速不少, 装上 ideaVim 这个插件之后可以基本抛弃鼠标。 各种快捷键的支持也是加快了开发的速度</li>
+  <li>多渠道打包 －&gt; 不用像 Eclipse 每个渠道一个工程， 现在基本上所有渠道在一个工程里面就可以批量出包。</li>
+  <li>gradle 定制化输出， 出包时可以喝喝茶， 基本上可以达到完全的自动化</li>
+  <li>Eclipse 到 Android Studio 的转化只需要少量的修改就能完美运行</li>
+  <li>Android 中对 dex文件中方法用 16 为整数标记， 单个 dex 文件无法超过 65535. <code class="highlighter-rouge">gradle + Android Studio</code> 将不会遇到这种问题</li>
+</ul>
+
+<p>各种 SDK 的评价：</p>
+
+<ul>
+  <li><a href="https://bugtags.com/" title="Bugtags">BugTags</a> 完全改变了原来老的测试模式。 崩溃时操作步骤的，日志，崩溃栈的收集可以不用怎么担心怎么复现这个 Bug， 更快的解决问题。 还能导出历史bug纪录为 xlsx 。接入的成本很小</li>
+  <li>TalkingData：除了 <code class="highlighter-rouge">友盟</code> 之外另外的统计渠道数据的 SDK， 后台功能做的很完善。 可以方便的查看各种数据来做定向的投放。接入成本很小</li>
+  <li>个推：推送使用 Google 的 GCM 解决方案本来是最好的选择， 由于国内的网络环境无法使用。 个推用下来感觉还不错， 就是会额外增加 App 的耗电量。 接入成本小</li>
+  <li>
+    <p>易接： 一个母包盒服务器调通一次从登陆到支付的流程就可以批量出包了。 看起来貌似是节省了时间， 其实感觉会有点问题：</p>
+
+    <ul>
+      <li>走的流程会稍微绕一点</li>
+      <li>易接服务器如果挂掉， 所有渠道都会挂掉</li>
+      <li>出包时渠道的各种奇葩要求沟通成本会很大， 效率及其低下</li>
+    </ul>
+  </li>
+</ul>
+
+
+  <address class="signature">
+    <a class="author" href="/">ShunFa Zhang</a> 
+    <span class="date">24 February 2016</span>
+    <span class="location"></span>
+  </address>
+  
+  <div class="prev-next">
+  
+  
+    <a href="/life/2016/01/23/weixin" class="prev" title="WeChat">&larr; Earlier Post</a>
+  
+  </div>
+  
+</div><!-- End Page -->
+
+
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'Garretthh07'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+
+  
+  <div id="footer">
+  	<address>
+  		<span class="copyright">
+  			Content by <a href="/info/site.html">ShunFa Zhang</a>. Design by 
+  			<a href="http://mark.reid.name/">Mark Reid</a>
+  			<br/>
+  			(<a rel="licence" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Some rights reserved</a>)			
+  		</span>
+  		<span class="engine">
+  			Powered by <a href="http://github.com/mojombo/jekyll/" title="A static, minimalist CMS">Jekyll</a>
+  		</span>
+  	</address>
+  </div>
+  
+</div>
+
+<!--[if IE 6]>
+<script type="text/javascript"> 
+	/*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+	var IE6UPDATE_OPTIONS = {
+		icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+	}
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+
+  
+
+
+
+</body>
+</html>
+

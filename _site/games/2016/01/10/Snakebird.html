@@ -1,0 +1,231 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Snakebird &larr; </title>
+   <meta name="author" content="ShunFa Zhang" />
+
+   <link rel="start" href="/" />
+
+	
+	
+	
+  	<link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/Garretthh07" title="RSS feed" />
+	
+	
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/assets/themes//css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/assets/themes//css/screen.css" type="text/css" />
+
+</head>
+<body id="">
+<div id="site">
+  
+  <div id="header">
+    <h1>
+    	<a href="/" title="Garretthh07's Blog">Garretthh07's Blog</a>
+    	<span class="byline">&larr; <a href="/">ShunFa Zhang</a></span>
+    </h1>
+    <ul class="nav">
+      <li><a class="home" href="/">Home</a></li>
+      <li><a  href="/archive.html">Archive</a></li>
+      <li><a  href="/pages.html">Pages</a></li>
+      <li><a  href="/categories.html">Categories</a></li>
+      <li><a  href="/tags.html">Tags</a></li>
+    </ul>
+  </div>
+
+  
+<div id="page">
+	
+  <h1 class="emphnext">Snakebird</h1>
+  <ul class="tag_box inline">
+  
+  
+
+
+  
+     
+    	<li><a href="/tags.html#Game-ref">Game <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Steam-ref">Steam <span>1</span></a></li>
+    
+  
+
+
+
+  </ul>
+
+  
+<hr />
+
+<h3 id="snakebird">Snakebird</h3>
+
+<p>这是这个游戏的下载地址, 请看到的不要传播, 喜欢这个游戏可以去 <code class="highlighter-rouge">Steam</code> 主页上购买:</p>
+
+<ul>
+  <li>Steam 上的链接:  <a href="http://store.steampowered.com/search/?snr=1_4_4__12&amp;term=Snakebird">Snakebird</a></li>
+  <li>试玩的话可以去这个链接下载: <a href="http://7xpgi9.com1.z0.glb.clouddn.com/Snakebird.rar" title="Snakebird">Snakebird</a></li>
+  <li><em>由于胡乱下载传播, 本人不负任何责任。</em></li>
+</ul>
+
+<blockquote>
+  <p>这个游戏总体来说设计的还算比较新颖，玩了差不多一天感觉还是蛮有意思的，很多时候想要达到目的只能是刚刚好的那种操作。可以看出来作者花费了很多功夫来制作这个游戏。</p>
+</blockquote>
+
+<p><img src="http://7xpgi9.com1.z0.glb.clouddn.com/snakebird_origin_meitu_1.jpg" alt="Snakebird" title="Snakebird" /></p>
+
+<h3 id="section">技术分析</h3>
+<p>制作这个游戏的主要难点在于关卡的设计上，技术难度应该是不大的:
+- 2D游戏引擎
+- 一些会吸引你注意力的动画
+- 关卡用地图编辑器
+- 组件之间使用物理引擎，刚体的不可相交，设置下重力使 <code class="highlighter-rouge">Snakebird</code> 超过支撑点之后往下掉出边界游戏失败和到达终点游戏胜利。</p>
+
+<p>感觉怎么样都是能做的。关卡应该是有个大概有个想做的样子，写程序遍历出来的， 最后做下精心的挑选。要是真的是人脑想出来的只能对这个人说佩服佩服了。</p>
+
+<p>游戏相信是使用差不多的手段做出来了，可能我的做法比较 <code class="highlighter-rouge">Low</code>， 但是大体应该是不会有差的。</p>
+
+<h4 id="section-1">为什么不再玩</h4>
+<p>一开始感觉还是感觉挺有意思的， 想都不想上来就是一步一步试错的点， 玩到打星的关卡突然就行不通了， 发现如下问题:
+- 游戏没有提示，一开始就发现梯子能动，但是真的发现要使用梯子才能过去，是在把 <code class="highlighter-rouge">3</code>条蛇都连接起来还是够不到的时候，这就耗费我差不多10多分钟的时间</p>
+
+<ul>
+  <li>
+    <p>由于蛇的长短不一，游戏经过作者的精心设计差不多只能有一种方式才能过去，如果不想清楚的话回一直在做 <code class="highlighter-rouge">Undo操作</code>(回退)，有点想深度优先搜索， 会消耗你大量时间，陷在里面的话只能一直绕了， 没有出来的可能</p>
+  </li>
+  <li>
+    <p>最后所有失败的猜想都尝试过了， 剩下你感觉是正确的完成游戏的样子，你要达到那个样子也是很花时间的。 因为每步操作都是要刚刚好才能过去，一步小心弄错了都要重来。<code class="highlighter-rouge">Undo操作</code> 会为你节省点时间，但是有些是节省不了的，要重来还是要重来的。</p>
+  </li>
+  <li>
+    <p>越难的关卡到后面可能之后分短的组合， 如过要完成整个关卡要5步，你要先思考完成第一步，然后第二部， 一直到最后一步。 其中任何出现差错或没有想清楚都要重来 </p>
+  </li>
+  <li>
+    <p>游戏里面的海星，彩虹会吸引你的注意力。因为前面有有能吃掉果实，蛇变长的例子，点击那些中立物有反应，自然回想能不能吃，然而并不能。</p>
+  </li>
+</ul>
+
+<h3 id="section-2">总结</h3>
+<ul>
+  <li>
+    <p>这个游戏是一个好游戏，很有创新， 作者花费了大量的时间来制作， 很用心。测量不了长度还能在屏幕上打开网格，可以说一目了然。</p>
+  </li>
+  <li>
+    <p>我不玩的原因就是花点时间都是能通关的， 想的仔细点就能通关，花的时间也少点。</p>
+  </li>
+  <li>
+    <p>作者的设计应该是正确操作下不会超过20组能解出来，再多的话就太耗时间了， 虽然现在也很耗，无聊打发时间还可以。 </p>
+  </li>
+  <li>
+    <p>可能后面对难度有新的定义， 我感觉差不多就一下情况:</p>
+    <ul>
+      <li>加梯子之类的可移动中立物来增加变量来提升难度</li>
+      <li>加果实之类的来提升蛇的长度来提升难度， 果实多了要选择给哪条蛇吃要选下，如果只是一种情况可行的话，就要一直 <code class="highlighter-rouge">Undo</code> 到一个你认为正确的节点</li>
+      <li>增加蛇的数量， 蛇的长度不一， 上下叠加的顺序也要考虑</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>其他增加游戏难度的变量要多少想下都是有的吧。如果谁通关了不是太有毅力就是深谋远虑，一次想清楚通过才是正确的玩法， 没想清楚瞎玩都是浪费时间。</p>
+</blockquote>
+
+<h3 id="tips">Tips</h3>
+<p>想要学英语的朋友推荐下面这个网站: <a href="http://www.lavafox.com/" title="Lavafox">Lavafox</a></p>
+
+<p>简单介绍下:
+- 首先学英语如果只知道背单词英语肯定是学不好的</p>
+
+<ul>
+  <li>
+    <p>马上拿本英文书来看，看一会就要睡着了</p>
+  </li>
+  <li>
+    <p>这个网站先看视屏里面的单词，然后看美剧视屏,  最后复习。感觉还是比较有意思的，起码两个小时看下来和玩游戏一样很投入。</p>
+  </li>
+</ul>
+
+<p>绝对不是做广告，也没有拿广告费。 想学的可以去注册免费体验一把。只能说谁用谁知道， 年费 <code class="highlighter-rouge">169元</code> 也不是很贵， 我试用两小时马上就买了， 穷人只能买买这些东西了。</p>
+
+
+  <address class="signature">
+    <a class="author" href="/">ShunFa Zhang</a> 
+    <span class="date">10 January 2016</span>
+    <span class="location"></span>
+  </address>
+  
+  <div class="prev-next">
+  
+    <a href="/life/2016/01/23/weixin" class="next" title="WeChat">Next Post &rarr;</a>
+  
+  
+    <a href="/tools/2015/12/27/texmacs" class="prev" title="Texmacs">&larr; Earlier Post</a>
+  
+  </div>
+  
+</div><!-- End Page -->
+
+
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'Garretthh07'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+
+  
+  <div id="footer">
+  	<address>
+  		<span class="copyright">
+  			Content by <a href="/info/site.html">ShunFa Zhang</a>. Design by 
+  			<a href="http://mark.reid.name/">Mark Reid</a>
+  			<br/>
+  			(<a rel="licence" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Some rights reserved</a>)			
+  		</span>
+  		<span class="engine">
+  			Powered by <a href="http://github.com/mojombo/jekyll/" title="A static, minimalist CMS">Jekyll</a>
+  		</span>
+  	</address>
+  </div>
+  
+</div>
+
+<!--[if IE 6]>
+<script type="text/javascript"> 
+	/*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+	var IE6UPDATE_OPTIONS = {
+		icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+	}
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+
+  
+
+
+
+</body>
+</html>
+

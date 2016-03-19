@@ -1,0 +1,243 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Dijkstra Lambda &larr; </title>
+   <meta name="author" content="ShunFa Zhang" />
+
+   <link rel="start" href="/" />
+
+	
+	
+	
+  	<link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/Garretthh07" title="RSS feed" />
+	
+	
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/assets/themes//css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/assets/themes//css/screen.css" type="text/css" />
+
+</head>
+<body id="">
+<div id="site">
+  
+  <div id="header">
+    <h1>
+    	<a href="/" title="Garretthh07's Blog">Garretthh07's Blog</a>
+    	<span class="byline">&larr; <a href="/">ShunFa Zhang</a></span>
+    </h1>
+    <ul class="nav">
+      <li><a class="home" href="/">Home</a></li>
+      <li><a  href="/archive.html">Archive</a></li>
+      <li><a  href="/pages.html">Pages</a></li>
+      <li><a  href="/categories.html">Categories</a></li>
+      <li><a  href="/tags.html">Tags</a></li>
+    </ul>
+  </div>
+
+  
+<div id="page">
+	
+  <h1 class="emphnext">Dijkstra Lambda</h1>
+  <ul class="tag_box inline">
+  
+  
+
+
+  
+     
+    	<li><a href="/tags.html#Lambda-ref">Lambda <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Life-ref">Life <span>4</span></a></li>
+    
+  
+
+
+
+  </ul>
+
+  
+<blockquote>
+  <p>今天稍微看了下 <code class="highlighter-rouge">Java</code> 中 <code class="highlighter-rouge">Lambda</code> 的实现，<code class="highlighter-rouge">Lambda</code> 是 <code class="highlighter-rouge">Java 8</code> 中添加的新特性, 如果要我评价这个发明是不是伟大，答案一定是肯定的：</p>
+</blockquote>
+
+<h4 id="lambda">为什么需要 Lambda</h4>
+
+<p><br /></p>
+
+<p>Java 中增加 Lambda 说实话并没有增加什么新的功能。只是可以使用更少的代码，更优雅的实现相关的功能。俗话说的好：</p>
+
+<blockquote>
+  <p>越少的代码实现相关功能，才能犯越少的错误。就算犯错了也能快速的定位，并修改掉。</p>
+</blockquote>
+
+<p>参考： <a href="http://www.javaworld.com/article/2092260/java-se/java-programming-with-lambda-expressions.html">Java programming with lambda expressions</a> </p>
+
+<p>Java 不像 C++ 支持函数指针传递给另外的函数调用，也不像 Lua 函数本身就是一种基本类型。 想要实现类似于传递函数给另外的函数在内部调用，一般都是先实现一个只有一个方法的接口（<strong>计为 A</strong>），调用方式如下：</p>
+
+<ul>
+  <li>写一个类以 <code class="highlighter-rouge">A</code> 作为接口，实现 <code class="highlighter-rouge">A</code> 接口的方法， 以 <code class="highlighter-rouge">A</code> 作为函数的参数，把 new 出来的该类传递过去。这样实现有几个弊端：
+    <ul>
+      <li>需要这个接口实现另外的功能就需要另外新建一个类继承这个接口，需求越多重复的工作就越多</li>
+      <li>接口只能有一个方法显得累赘</li>
+    </ul>
+  </li>
+  <li>使用匿名函数可以不用每次有新功能就增加一个类，但是代码冗长一点都不优雅</li>
+  <li>
+    <p>Lambda 用如下语法来扩展了接口，一句话就可以实现，把编码中心真的放在功能的实现上，结果也是一目了然。</p>
+
+    <div class="highlighter-rouge"><pre><code class="highlight">  (double x) -&gt; Math.sin(x)
+</code></pre>
+    </div>
+  </li>
+  <li><strong>java.util.function</strong> 的引入可以不用新增接口就可以实现相关工作</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="section">总结</h4>
+
+<p><br /></p>
+
+<p><a href="http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html">Java SE 8: Lambda Quick Start</a> 里面有更佳详细的介绍，纪录一下：</p>
+
+<blockquote>
+  <p>Runnable, 按钮的点击回调这些需要实现一个 <strong>Listener</strong> 接口方法的都可以使用 Lambda 来大大的简化， Lambda 表达式还可以嵌套使用，感觉还是可以比较清晰的实现相关功能的，而且可以写的比较优雅。</p>
+</blockquote>
+
+<p><br /></p>
+
+<h4 id="life-tips">Life Tips</h4>
+
+<p><br /></p>
+
+<p><a href="http://v.youku.com/v_show/id_XNjc1MDMzNDg4.html"><img src="http://7xpgi9.com1.z0.glb.clouddn.com/dijkstra.png" alt="Dijkstra" title="Dijkstra" /></a></p>
+
+<blockquote>
+  <p>现在很多人都喜欢把比自己厉害的人叫做大牛，感觉这是一种很不好的风气。我感觉应该分为另自己尊敬的人和和自己无关的人，这个划分完全按照个人而定，所以我也没有资格来评价别人啦。 Dijkstral 的采访视屏有很多获益匪浅的话在这里记录一下，诚然他是令我尊敬的人：</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>As long as you can fool people into buging it, you can always try to make better versions later. Even with decimals, version 2.6 or 2.6.That nonsense, while version 1 should have been the finished product.</p>
+  </li>
+  <li>
+    <p>The universities lack the courage to teach hard science. The will continue to misguide the students and each stage in the infantilization of the curriculum will be hailed as educational progress</p>
+  </li>
+  <li>
+    <p>There are very different programming styles. I tend to see them as Mozart versus Beethoven. When Mozart started to write, the composition was finished. He wrote the manuscript in one go.In beautiful handwriting, too. Beethoven was a doubter and a struggler, who started writing before he finished the composition and then glued corrections onto the page. In one place he did this nine times, when they peeled them, the last version proved identical to the first one.</p>
+  </li>
+  <li>
+    <p>People thought that those languages <code class="highlighter-rouge">(Fortran, Pascal, C++ and such like)</code> would solve the programming problem. But when you look closely, the trivial aspects of programming had been automated, while the hard ones remained.</p>
+  </li>
+  <li>
+    <p>If in physics there’s something you don’t understand, you can always hide behind the uncharted depths of nature. You can always blame God. You didn’t make it so complex yourself. But if your program doesn’t work, there is no one to hide behind. You cannot hide behind an obstinate nature. A zero is a zero, a one is a one. If it doesn’t work, you’ve messed up.</p>
+  </li>
+  <li>I knew that each Apollo flight required some 40,000 new lines of code. I don’t know what unit a line of code is, but 40,000 is a lot. I was duly impressed that they got so many lines of code correct:
+    <ul>
+      <li>
+        <p>He said that in one of the calculations of the orbit of the lunar module, the moon had been defined as repelling instead of attracting.</p>
+      </li>
+      <li>
+        <p>They  had discovered that error by accident, five days before the shot.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Program testing can convincingly show the presence of bugs, but is is hopelessly inadequate to show their absence.</p>
+  </li>
+  <li>
+    <p>Elegance is not a dispensable luxury, but a factor that decides between success and failure. <strong>Elegent</strong> may be meant as <strong>ingeniously simple and effective</strong> -&gt; the most elegant programs are often the most efficient.</p>
+  </li>
+  <li>
+    <p>Make sure you know all the formulae by heart, and if you need more than five lines, you’re on the wrong track.</p>
+  </li>
+  <li>Elegance has the disadvantage, if that’s what it is, that hard work is needed to achieve it and a good education to appeaciate it.</li>
+</ul>
+
+<blockquote>
+  <p>记录那么多像是再做毫无益处的苦力，我可以安慰自己这又学习了英语又加深了理解，其实所有的都是假象，当我发现自己花了一个小时做了一件蠢事的时候，已经做完了， 剩下的自由懊悔不已。 温习还得点击图片看视屏。</p>
+</blockquote>
+
+
+  <address class="signature">
+    <a class="author" href="/">ShunFa Zhang</a> 
+    <span class="date">25 December 2015</span>
+    <span class="location"></span>
+  </address>
+  
+  <div class="prev-next">
+  
+    <a href="/tools/2015/12/27/texmacs" class="next" title="Texmacs">Next Post &rarr;</a>
+  
+  
+    <a href="/books/2015/12/16/A-Little-Java-A-Few-Patterns" class="prev" title="A Little Java A Few Patterns">&larr; Earlier Post</a>
+  
+  </div>
+  
+</div><!-- End Page -->
+
+
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'Garretthh07'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+
+  
+  <div id="footer">
+  	<address>
+  		<span class="copyright">
+  			Content by <a href="/info/site.html">ShunFa Zhang</a>. Design by 
+  			<a href="http://mark.reid.name/">Mark Reid</a>
+  			<br/>
+  			(<a rel="licence" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Some rights reserved</a>)			
+  		</span>
+  		<span class="engine">
+  			Powered by <a href="http://github.com/mojombo/jekyll/" title="A static, minimalist CMS">Jekyll</a>
+  		</span>
+  	</address>
+  </div>
+  
+</div>
+
+<!--[if IE 6]>
+<script type="text/javascript"> 
+	/*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+	var IE6UPDATE_OPTIONS = {
+		icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+	}
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+
+  
+
+
+
+</body>
+</html>
+
