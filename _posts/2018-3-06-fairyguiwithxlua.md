@@ -82,7 +82,8 @@ public static class FairyGUIToXLuaConfig
 
 我这边拷贝 `FairyGUI` 官网上的介绍：
 
-    1. 将`LuaUIHelper.cs`放入你的工程。`TweenUtils.cs`是`DOTween`的一个辅助工具类，如果你需要就放入，不需要就不放，不是必须的。
+    1. 将`LuaUIHelper.cs`放入你的工程。`TweenUtils.cs`是`DOTween`的一个辅助工具类，
+    如果你需要就放入，不需要就不放，不是必须的。
     3. 将`FairyGUI.lua`放入你的lua文件存放目录。
 
 好的, 花了大概5分钟把这几个文件下载下来放入工程里面 (这里吐个槽, 后来我发现`ToLua`和`uLua`都有自己的`FairyGUI.lua`文件, 当时我没仔细看。)
@@ -151,7 +152,9 @@ public static class FairyGUIEventListenerExtension
 运行程序，还是相同的结果一点变化也没有。这时候后者脸皮在xLua群里开始问大家了，经过群主和管理的热心解答，我发现 [xLua的配置](https://github.com/Tencent/xLua/blob/master/Assets/XLua/Doc/configure.md) 里面有很短的两句话：
 
     XLua.CSharpCallLua
-    如果希望把一个lua函数适配到一个C# delegate（一类是C#侧各种回调：UI事件，delegate参数，比如List<T>:ForEach；另外一类场景是通过LuaTable的Get函数指明一个lua函数绑定到一个delegate）。或者把一个lua table适配到一个C# interface，该delegate或者interface需要加上该配置。
+    如果希望把一个lua函数适配到一个C# delegate（一类是C#侧各种回调：UI事件，delegate参数，
+    比如List<T>:ForEach；另外一类场景是通过LuaTable的Get函数指明一个lua函数绑定到一个delegate）。
+    或者把一个lua table适配到一个C# interface，该delegate或者interface需要加上该配置。
 
 不得不吐槽下, 这句话下面像静态列表一样加个代码的示例可以帮助大家更快的发现问题。对于我的问题的大致意思就是 `luafunction` 要知道对应的是 `EventCallback0` 还是 `EventCallback1`， 需要使用 `[CSharpCallLua]` 注册一下, 好好好, 你说的都对，马上加上下面这段代码(这就是为啥对于`xLua`不需要`FairyGUI.lua`的原因)：
 
