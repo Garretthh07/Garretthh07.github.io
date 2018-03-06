@@ -172,4 +172,4 @@ public static List<Type> CSharpCallLua = new List<Type>()
 最后感谢 xLua作者和 FairyGUI作者, 还有群里码友的热心解答。
 
 ### 完整的Demo
-完整的 `Demo` 放到 https://github.com/Garretthh07/FairyGUIWithXLua
+完整的 `Demo` 放到 [https://github.com/Garretthh07/FairyGUIWithXLua](https://github.com/Garretthh07/FairyGUIWithXLua)
