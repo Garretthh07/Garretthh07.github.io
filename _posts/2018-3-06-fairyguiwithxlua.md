@@ -11,7 +11,7 @@ tags: [GameLife]
 
 --------------------------
 
-主要对自己接入 `FairyGUI` 和 `xLua` 过程中遇到的问题进行总结, 完整的 `Demo` 放到 https://github.com/Garretthh07/FairyGUIWithXLua
+主要对自己接入 `FairyGUI` 和 `xLua` 过程中遇到的问题进行总结, 完整的 `Demo` 放到 [https://github.com/Garretthh07/FairyGUIWithXLua](https://github.com/Garretthh07/FairyGUIWithXLua)
 
 从开始使用 `Unity` 也有一段时间了, 我之前做过几年的 `Cocos2d` 几乎都是使用 `Lua` 写代码比较多。
 
@@ -25,7 +25,7 @@ tags: [GameLife]
 
 `FairyGUI` 官网上有详细的介绍怎么接入 `Lua` 的例子,　目前我接入的是 `xLua` 所以我主要看这部分
 
-    http://www.fairygui.com/guide/unity/lua.html
+    [http://www.fairygui.com/guide/unity/lua.html](http://www.fairygui.com/guide/unity/lua.html)
 
 ## 实际的接入过程
 
