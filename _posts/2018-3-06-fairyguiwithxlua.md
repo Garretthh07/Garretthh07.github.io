@@ -25,7 +25,7 @@ tags: [GameLife]
 
 `FairyGUI` 官网上有详细的介绍怎么接入 `Lua` 的例子,　目前我接入的是 `xLua` 所以我主要看这部分
 
-    [http://www.fairygui.com/guide/unity/lua.html](http://www.fairygui.com/guide/unity/lua.html)
+[http://www.fairygui.com/guide/unity/lua.html](http://www.fairygui.com/guide/unity/lua.html)
 
 ## 实际的接入过程
 
