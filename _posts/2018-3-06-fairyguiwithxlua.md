@@ -31,7 +31,7 @@ tags: [GameLife]
 
 参照 `FairyGUI` 官网上的介绍，还有 `xLua` 的文档我们很容易就可以把 `FairyGUI` 中使用的类和接口通过 `xLua` 导出到 `Lua` 那边来写
 
-完整的代码参考：https://github.com/Garretthh07/FairyGUIWithXLua/blob/master/Assets/Scripts/CSharp2LuaConfig.cs
+完整的代码参考：[CSharp2LuaConfig](https://github.com/Garretthh07/FairyGUIWithXLua/blob/master/Assets/Scripts/CSharp2LuaConfig.cs)
 
 ```
 /// <summary>  
